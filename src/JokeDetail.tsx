@@ -1,31 +1,26 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useCopyToClipboard } from './hooks/useCopyToClipboard';
 
 export const JokeDetail = () => {
   const {
-    state: { joke, id },
+    state: { joke },
   } = useLocation();
-
+  const [_, copy] = useCopyToClipboard();
   const [isCopied, setIsCopied] = useState(false);
 
-  const copyContent = async () => {
-    try {
-      await navigator.clipboard.writeText(joke);
-      console.log(`Content: // ${joke} // copied to clipboard`);
-      setIsCopied(true);
-    } catch (err) {
-      console.error('Failed to copy: ', err);
-    }
+  const handleCopy = async () => {
+    copy(joke);
+    setIsCopied(true);
   };
 
   return (
     <div className="joke-detail">
-      <h2>Joke detail for joke {id}!</h2>
       <span>
-        <p>{joke}</p>
-        <button onClick={copyContent}>
+        <button onClick={handleCopy}>
           <span>{isCopied ? 'Copied!' : 'Copy joke to clipboard'}</span>
         </button>
+        <p>{joke}</p>
       </span>
     </div>
   );

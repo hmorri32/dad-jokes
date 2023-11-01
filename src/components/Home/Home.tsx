@@ -27,7 +27,6 @@ export const Home = () => {
 
       const data = (await response.json()) as SearchResponse;
 
-      console.log(data);
       setJokes(data.results);
       setCurrentPage(data.current_page);
       setTotalPages(data.total_pages);
