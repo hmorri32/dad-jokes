@@ -1,14 +1,13 @@
 pre {
-  border: 1px solid #ddd;
   border-left: 3px solid #646cff;
+  border: 1px solid #ddd;
   color: #666;
-  page-break-inside: avoid;
+  display: block;
   font-family: monospace;
-  max-width: 100%;
   overflow: auto;
   padding: 1.5em;
-  display: block;
-  word-wrap: break-word;
   text-align: start;
   white-space: pre-wrap;
+  width: 65%;
+  word-wrap: break-word;
 }

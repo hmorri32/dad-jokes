@@ -3,19 +3,25 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import './Search.css';
 
-export const Search = () => {
+interface SearchProps {
+  searchTerm: string;
+  handleSearchChange: (searchTerm: string) => void;
+}
+
+export const Search = ({ searchTerm, handleSearchChange }: SearchProps) => {
   return (
-    <div className="jokes-container">
-      <div className="wrap">
-        <div className="search">
-          <input
-            type="text"
-            className="searchTerm"
-            placeholder="Search Dad Jokes"
-          />
-          <button type="submit" className="searchButton">
-            <FontAwesomeIcon icon={faSearch} />
-          </button>
+    <div className="wrap">
+      <div className="search">
+        <input
+          type="text"
+          name="searchTerm"
+          className="searchTerm"
+          placeholder="Search Dad Jokes"
+          value={searchTerm}
+          onChange={(e) => handleSearchChange(e.target.value)}
+        />
+        <div className="searchButton">
+          <FontAwesomeIcon icon={faSearch} />
         </div>
       </div>
     </div>

@@ -43,7 +43,7 @@ export const useDadJokes = (searchTerm: string, currentPage: number) => {
     };
 
     fetchDadJokes();
-  }, [searchTerm, currentPage]); // Dependency array
+  }, [searchTerm, currentPage]);
 
   return { jokes, loading, totalPages };
 };

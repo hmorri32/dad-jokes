@@ -10,15 +10,15 @@
 }
 
 .searchTerm {
-  width: 100%;
-  border: 1px solid #007acc;
-  border-right: none;
-  padding: 5px;
-  height: 20px;
   border-radius: 8px 0 0 8px;
-  outline: none;
-  font-weight: 600;
+  border-right: none;
+  border: 1px solid #007acc;
   font-size: 16px
+  font-weight: 600;
+  height: 20px;
+  outline: none;
+  padding: 5px;
+  width: 100%;
 }
 
 .searchTerm:focus {
@@ -26,16 +26,18 @@
   color: black;
 }
 
+
 .searchButton {
   align-items: center;
   background: white;
+  border-left: none;
   border-radius: 0 8px 8px 0;
   border: 1px solid #007acc;
   color: #007acc;
   cursor: pointer;
   display: flex;
   font-size: 20px;
-  height: 32px;
+  height: 30px;
   justify-content: center;
   text-align: center;
   width: 40px;
@@ -43,7 +45,6 @@
 
 .searchButton:focus,
 .searchButton:hover {
-  background: #007acc;
-  color: #fff;
+  cursor: initial;
 }
 

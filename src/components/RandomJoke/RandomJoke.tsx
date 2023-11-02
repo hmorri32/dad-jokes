@@ -36,8 +36,6 @@ export const RandomJoke = () => {
 
   useEffect(() => {
     fetchRandomJoke();
-
-    return () => {};
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useCopyToClipboard } from './hooks/useCopyToClipboard';
+import { useCopyToClipboard } from '../../hooks/useCopyToClipboard';
 
 export const JokeDetail = () => {
   const {
