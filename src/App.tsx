@@ -7,6 +7,7 @@ import { RandomJoke } from './components/RandomJoke/RandomJoke';
 import { Search } from './components/Search/Search';
 
 import './App.css';
+import { JokeForSlack } from './components/JokeForSlack/JokeForSlack';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Link to="/">Home</Link>
           <Link to="/search">Search</Link>
           <Link to="/random">Random Joke</Link>
+          <Link to="/joke-for-slack">A Joke for Slack</Link>
         </nav>
       </header>
 
@@ -24,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
           <Route path="/random" element={<RandomJoke />} />
+          <Route path="/joke-for-slack" element={<JokeForSlack />} />
           <Route path="/joke/:id" element={<JokeDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
